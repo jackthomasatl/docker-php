@@ -6,6 +6,8 @@ COPY ./scripts/* /opt/docker/scripts/
 
 # Php Modules
 RUN /bin/bash /opt/docker/scripts/build_php_pecl_dev_libs.sh
+
+# Dev utils
 RUN /bin/bash /opt/docker/scripts/install_dev_utils.sh
 
 # Move configs in
