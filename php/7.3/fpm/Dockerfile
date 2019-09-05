@@ -6,25 +6,16 @@ RUN mkdir -p /opt/docker/
 COPY ./scripts /opt/docker/scripts
 
 # Apt Sources
-# RUN /bin/bash /opt/docker/scripts/transport_https.sh
+# RUN /bin/bash /opt/docker/scripts/apt_transport_https.sh
 COPY ./apt/sources.list /etc/apt/sources.list
 
 # Php Modules
 RUN /bin/bash /opt/docker/scripts/build_php_base_libs.sh
 RUN /bin/bash /opt/docker/scripts/build_php_pecl_libs.sh
 
-# Install Utils
-ENV COMPOSER_ALLOW_SUPERUSER=1
-RUN /bin/bash /opt/docker/scripts/install_dev_utils.sh
-
-# Install Dev Tools
-COPY ./tools /opt/docker/tools
-ENV PATH="/opt/docker/tools:${PATH}"
-
 # Move configs in
 COPY ./config/php.ini /usr/local/etc/php/php.ini
 COPY ./config/php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
-COPY ./config/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Move php sample app
 RUN mkdir -p /app/docroot

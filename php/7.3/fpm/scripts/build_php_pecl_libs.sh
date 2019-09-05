@@ -4,12 +4,16 @@ if [ -n "$HTTP_PROXY" ]; then
     pear config-set http_proxy "$HTTP_PROXY"
 fi
 
-PECL_PHP_MODULES=('imagick' 'memcached' 'oauth' 'redis' 'xdebug' 'yaml')
+PECL_PHP_MODULES=(
+  'imagick'           ## Image transform library
+  'memcached'         ## Memcached driver
+  'oauth'             ## Oauth client / server libraries
+  'redis'             ## Redis driver
+  'yaml'              ## Yaml encode/decode
+)
 
-# newrelic (ignored), tideways (ignored)
 IMAGICK_LIBS='libmagickwand-dev' #
 MEMCACHED_LIBS='libmemcached-dev'
-SSH_LIBS='openssh-client libssh2-1-dev'
 YAML_LIBS='libyaml-dev'
 
 echo "Installing dependencies: "
@@ -17,7 +21,7 @@ apt-get update \
   && apt-get install -q -y --no-install-recommends \
     $IMAGICK_LIBS \
     $MEMCACHED_LIBS \
-    $SSH_LIBS \
+    $SQLITE_LIBS \
     $YAML_LIBS
 
 for module_name in "${PECL_PHP_MODULES[@]}"; do
