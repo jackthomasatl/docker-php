@@ -1,0 +1,903 @@
+Sending build context to Docker daemon  12.29kB
+Step 1/9 : FROM jackthomasatl/docker-php:7.3.8-fpm
+7.3.8-fpm: Pulling from jackthomasatl/docker-php
+1ab2bdfe9778: Pulling fs layer
+1448c64389e0: Pulling fs layer
+4b8a4e62b444: Pulling fs layer
+9eb9d1e8e241: Pulling fs layer
+a7bf87822557: Pulling fs layer
+ee32605e8bd1: Pulling fs layer
+965457a3bcd9: Pulling fs layer
+9960277f11c7: Pulling fs layer
+20195d6057d9: Pulling fs layer
+39ec1e7c5417: Pulling fs layer
+1b6c868c5491: Pulling fs layer
+8b3c26ee8e2e: Pulling fs layer
+df04f05d8bed: Pulling fs layer
+0d392c60a6bf: Pulling fs layer
+d67f68a91c46: Pulling fs layer
+292da819c603: Pulling fs layer
+080f50a591fb: Pulling fs layer
+d7620fa003ee: Pulling fs layer
+d93a4d8a1360: Pulling fs layer
+b474293dc6ae: Pulling fs layer
+0318b171ea03: Pulling fs layer
+080f50a591fb: Waiting
+d7620fa003ee: Waiting
+d93a4d8a1360: Waiting
+b474293dc6ae: Waiting
+0318b171ea03: Waiting
+8b3c26ee8e2e: Waiting
+df04f05d8bed: Waiting
+0d392c60a6bf: Waiting
+ee32605e8bd1: Waiting
+965457a3bcd9: Waiting
+9960277f11c7: Waiting
+20195d6057d9: Waiting
+9eb9d1e8e241: Waiting
+a7bf87822557: Waiting
+39ec1e7c5417: Waiting
+d67f68a91c46: Waiting
+1b6c868c5491: Waiting
+292da819c603: Waiting
+1448c64389e0: Verifying Checksum
+1448c64389e0: Download complete
+9eb9d1e8e241: Download complete
+1ab2bdfe9778: Verifying Checksum
+1ab2bdfe9778: Download complete
+ee32605e8bd1: Verifying Checksum
+ee32605e8bd1: Download complete
+a7bf87822557: Verifying Checksum
+a7bf87822557: Download complete
+9960277f11c7: Verifying Checksum
+9960277f11c7: Download complete
+1ab2bdfe9778: Pull complete
+1448c64389e0: Pull complete
+20195d6057d9: Verifying Checksum
+20195d6057d9: Download complete
+39ec1e7c5417: Verifying Checksum
+39ec1e7c5417: Download complete
+965457a3bcd9: Verifying Checksum
+965457a3bcd9: Download complete
+1b6c868c5491: Verifying Checksum
+1b6c868c5491: Download complete
+8b3c26ee8e2e: Verifying Checksum
+8b3c26ee8e2e: Download complete
+df04f05d8bed: Verifying Checksum
+df04f05d8bed: Download complete
+0d392c60a6bf: Download complete
+292da819c603: Verifying Checksum
+292da819c603: Download complete
+080f50a591fb: Verifying Checksum
+080f50a591fb: Download complete
+d7620fa003ee: Verifying Checksum
+d7620fa003ee: Download complete
+d93a4d8a1360: Verifying Checksum
+d93a4d8a1360: Download complete
+b474293dc6ae: Verifying Checksum
+b474293dc6ae: Download complete
+0318b171ea03: Verifying Checksum
+0318b171ea03: Download complete
+d67f68a91c46: Verifying Checksum
+d67f68a91c46: Download complete
+4b8a4e62b444: Download complete
+4b8a4e62b444: Pull complete
+9eb9d1e8e241: Pull complete
+a7bf87822557: Pull complete
+ee32605e8bd1: Pull complete
+965457a3bcd9: Pull complete
+9960277f11c7: Pull complete
+20195d6057d9: Pull complete
+39ec1e7c5417: Pull complete
+1b6c868c5491: Pull complete
+8b3c26ee8e2e: Pull complete
+df04f05d8bed: Pull complete
+0d392c60a6bf: Pull complete
+d67f68a91c46: Pull complete
+292da819c603: Pull complete
+080f50a591fb: Pull complete
+d7620fa003ee: Pull complete
+d93a4d8a1360: Pull complete
+b474293dc6ae: Pull complete
+0318b171ea03: Pull complete
+Digest: sha256:80cd9c2450b17314b1e67d6d5ee60fce13c8f1315708613c06ef12c5acbac05e
+Status: Downloaded newer image for jackthomasatl/docker-php:7.3.8-fpm
+ ---> 0f5ae47cf129
+Step 2/9 : COPY ./scripts/* /opt/docker/scripts/
+ ---> b7cea2e2358a
+Step 3/9 : RUN /bin/bash /opt/docker/scripts/build_php_pecl_dev_libs.sh
+ ---> Running in 41b9abe66c03
+Installing dependencies: 
+
+
+
+
+
+
+PECL EXT Install: xdebug
+downloading xdebug-2.7.2.tgz ...
+Starting to download xdebug-2.7.2.tgz (230,987 bytes)
+.................................................done: 230,987 bytes
++ create dir /usr/local/lib/php/doc/xdebug/contrib
+md5sum ok: /usr/local/lib/php/doc/xdebug/contrib/tracefile-analyser.php
+md5sum ok: /usr/local/lib/php/doc/xdebug/contrib/xt.vim
++ create dir /tmp/pear/temp/xdebug/debugclient
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/buildconf
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpbuildconf to /tmp/pear/temp/xdebug/debugclient/buildconf
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/config.guess
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpconfig.guess to /tmp/pear/temp/xdebug/debugclient/config.guess
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/config.h.in
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpconfig.h.in to /tmp/pear/temp/xdebug/debugclient/config.h.in
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/config.sub
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpconfig.sub to /tmp/pear/temp/xdebug/debugclient/config.sub
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/configure
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpconfigure to /tmp/pear/temp/xdebug/debugclient/configure
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/configure.ac
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpconfigure.ac to /tmp/pear/temp/xdebug/debugclient/configure.ac
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/debugclient.dsp
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpdebugclient.dsp to /tmp/pear/temp/xdebug/debugclient/debugclient.dsp
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/INSTALL
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpINSTALL to /tmp/pear/temp/xdebug/debugclient/INSTALL
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/install-sh
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpinstall-sh to /tmp/pear/temp/xdebug/debugclient/install-sh
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/LICENSE
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpLICENSE to /tmp/pear/temp/xdebug/debugclient/LICENSE
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/main.c
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpmain.c to /tmp/pear/temp/xdebug/debugclient/main.c
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/Makefile.in
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpMakefile.in to /tmp/pear/temp/xdebug/debugclient/Makefile.in
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/README
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpREADME to /tmp/pear/temp/xdebug/debugclient/README
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/usefulstuff.c
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpusefulstuff.c to /tmp/pear/temp/xdebug/debugclient/usefulstuff.c
+md5sum ok: /tmp/pear/temp/xdebug/debugclient/usefulstuff.h
+renamed source file /tmp/pear/temp/xdebug/debugclient/.tmpusefulstuff.h to /tmp/pear/temp/xdebug/debugclient/usefulstuff.h
+md5sum ok: /tmp/pear/temp/xdebug/config.m4
+renamed source file /tmp/pear/temp/xdebug/.tmpconfig.m4 to /tmp/pear/temp/xdebug/config.m4
+md5sum ok: /tmp/pear/temp/xdebug/config.w32
+renamed source file /tmp/pear/temp/xdebug/.tmpconfig.w32 to /tmp/pear/temp/xdebug/config.w32
+md5sum ok: /usr/local/lib/php/doc/xdebug/CREDITS
+md5sum ok: /usr/local/lib/php/doc/xdebug/LICENSE
+md5sum ok: /usr/local/lib/php/doc/xdebug/xdebug.ini
+md5sum ok: /tmp/pear/temp/xdebug/Makefile.frag
+renamed source file /tmp/pear/temp/xdebug/.tmpMakefile.frag to /tmp/pear/temp/xdebug/Makefile.frag
+md5sum ok: /tmp/pear/temp/xdebug/php_xdebug.h
+renamed source file /tmp/pear/temp/xdebug/.tmpphp_xdebug.h to /tmp/pear/temp/xdebug/php_xdebug.h
+md5sum ok: /usr/local/lib/php/doc/xdebug/README.rst
+md5sum ok: /tmp/pear/temp/xdebug/usefulstuff.c
+renamed source file /tmp/pear/temp/xdebug/.tmpusefulstuff.c to /tmp/pear/temp/xdebug/usefulstuff.c
+md5sum ok: /tmp/pear/temp/xdebug/usefulstuff.h
+renamed source file /tmp/pear/temp/xdebug/.tmpusefulstuff.h to /tmp/pear/temp/xdebug/usefulstuff.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug.c to /tmp/pear/temp/xdebug/xdebug.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_branch_info.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_branch_info.c to /tmp/pear/temp/xdebug/xdebug_branch_info.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_branch_info.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_branch_info.h to /tmp/pear/temp/xdebug/xdebug_branch_info.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_code_coverage.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_code_coverage.c to /tmp/pear/temp/xdebug/xdebug_code_coverage.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_code_coverage.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_code_coverage.h to /tmp/pear/temp/xdebug/xdebug_code_coverage.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_com.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_com.c to /tmp/pear/temp/xdebug/xdebug_com.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_com.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_com.h to /tmp/pear/temp/xdebug/xdebug_com.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_compat.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_compat.c to /tmp/pear/temp/xdebug/xdebug_compat.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_compat.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_compat.h to /tmp/pear/temp/xdebug/xdebug_compat.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_filter.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_filter.c to /tmp/pear/temp/xdebug/xdebug_filter.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_filter.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_filter.h to /tmp/pear/temp/xdebug/xdebug_filter.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_gc_stats.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_gc_stats.c to /tmp/pear/temp/xdebug/xdebug_gc_stats.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_gc_stats.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_gc_stats.h to /tmp/pear/temp/xdebug/xdebug_gc_stats.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_handlers.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_handlers.c to /tmp/pear/temp/xdebug/xdebug_handlers.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_handlers.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_handlers.h to /tmp/pear/temp/xdebug/xdebug_handlers.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_handler_dbgp.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_handler_dbgp.c to /tmp/pear/temp/xdebug/xdebug_handler_dbgp.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_handler_dbgp.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_handler_dbgp.h to /tmp/pear/temp/xdebug/xdebug_handler_dbgp.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_hash.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_hash.c to /tmp/pear/temp/xdebug/xdebug_hash.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_hash.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_hash.h to /tmp/pear/temp/xdebug/xdebug_hash.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_llist.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_llist.c to /tmp/pear/temp/xdebug/xdebug_llist.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_llist.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_llist.h to /tmp/pear/temp/xdebug/xdebug_llist.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_mm.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_mm.h to /tmp/pear/temp/xdebug/xdebug_mm.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_monitor.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_monitor.c to /tmp/pear/temp/xdebug/xdebug_monitor.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_monitor.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_monitor.h to /tmp/pear/temp/xdebug/xdebug_monitor.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_private.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_private.c to /tmp/pear/temp/xdebug/xdebug_private.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_private.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_private.h to /tmp/pear/temp/xdebug/xdebug_private.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_profiler.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_profiler.c to /tmp/pear/temp/xdebug/xdebug_profiler.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_profiler.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_profiler.h to /tmp/pear/temp/xdebug/xdebug_profiler.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_set.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_set.c to /tmp/pear/temp/xdebug/xdebug_set.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_set.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_set.h to /tmp/pear/temp/xdebug/xdebug_set.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_stack.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_stack.c to /tmp/pear/temp/xdebug/xdebug_stack.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_stack.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_stack.h to /tmp/pear/temp/xdebug/xdebug_stack.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_str.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_str.c to /tmp/pear/temp/xdebug/xdebug_str.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_str.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_str.h to /tmp/pear/temp/xdebug/xdebug_str.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_superglobals.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_superglobals.c to /tmp/pear/temp/xdebug/xdebug_superglobals.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_superglobals.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_superglobals.h to /tmp/pear/temp/xdebug/xdebug_superglobals.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_tracing.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_tracing.c to /tmp/pear/temp/xdebug/xdebug_tracing.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_tracing.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_tracing.h to /tmp/pear/temp/xdebug/xdebug_tracing.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_trace_textual.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_trace_textual.c to /tmp/pear/temp/xdebug/xdebug_trace_textual.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_trace_textual.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_trace_textual.h to /tmp/pear/temp/xdebug/xdebug_trace_textual.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_trace_computerized.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_trace_computerized.c to /tmp/pear/temp/xdebug/xdebug_trace_computerized.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_trace_computerized.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_trace_computerized.h to /tmp/pear/temp/xdebug/xdebug_trace_computerized.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_trace_html.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_trace_html.c to /tmp/pear/temp/xdebug/xdebug_trace_html.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_trace_html.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_trace_html.h to /tmp/pear/temp/xdebug/xdebug_trace_html.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_var.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_var.c to /tmp/pear/temp/xdebug/xdebug_var.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_var.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_var.h to /tmp/pear/temp/xdebug/xdebug_var.h
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_xml.c
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_xml.c to /tmp/pear/temp/xdebug/xdebug_xml.c
+md5sum ok: /tmp/pear/temp/xdebug/xdebug_xml.h
+renamed source file /tmp/pear/temp/xdebug/.tmpxdebug_xml.h to /tmp/pear/temp/xdebug/xdebug_xml.h
+69 source files, building
+building in /tmp/pear/temp/xdebug
+running: phpize
+Configuring for:
+PHP Api Version:         20180731
+Zend Module Api No:      20180731
+Zend Extension Api No:   320180731
+building in /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2
+running: /tmp/pear/temp/xdebug/configure --with-php-config=/usr/local/bin/php-config
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for a sed that does not truncate output... /bin/sed
+checking for cc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for icc... no
+checking for suncc... no
+checking whether cc understands -c and -o together... yes
+checking for system library directory... lib
+checking if compiler supports -R... no
+checking if compiler supports -Wl,-rpath,... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking target system type... x86_64-pc-linux-gnu
+checking for PHP prefix... /usr/local
+checking for PHP includes... -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib
+checking for PHP extension directory... /usr/local/lib/php/extensions/no-debug-non-zts-20180731
+checking for PHP installed headers prefix... /usr/local/include/php
+checking if debug is enabled... no
+checking if zts is enabled... no
+checking for re2c... re2c
+checking for re2c version... 1.1.1 (ok)
+checking for gawk... no
+checking for nawk... nawk
+checking if nawk is broken... no
+checking whether to enable Xdebug support... yes, shared
+checking whether to enable Xdebug developer build flags... no
+checking Check for supported PHP versions... supported (7.3.8)
+checking for gettimeofday... yes
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking for cos in -lm... yes
+checking for ld used by cc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking whether ln -s works... yes
+checking how to recognize dependent libraries... pass_all
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking the maximum length of command line arguments... 1572864
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... ranlib
+checking for strip... strip
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC
+checking if cc PIC flag -fPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking whether the cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+
+creating libtool
+appending configuration tag "CXX" to libtool
+configure: creating ./config.status
+config.status: creating config.h
+running: make
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug.c -o xdebug.lo
+mkdir .libs
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug.c  -fPIC -DPIC -o .libs/xdebug.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_branch_info.c -o xdebug_branch_info.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_branch_info.c  -fPIC -DPIC -o .libs/xdebug_branch_info.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_code_coverage.c -o xdebug_code_coverage.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_code_coverage.c  -fPIC -DPIC -o .libs/xdebug_code_coverage.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_com.c -o xdebug_com.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_com.c  -fPIC -DPIC -o .libs/xdebug_com.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_compat.c -o xdebug_compat.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_compat.c  -fPIC -DPIC -o .libs/xdebug_compat.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_gc_stats.c -o xdebug_gc_stats.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_gc_stats.c  -fPIC -DPIC -o .libs/xdebug_gc_stats.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_filter.c -o xdebug_filter.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_filter.c  -fPIC -DPIC -o .libs/xdebug_filter.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_handler_dbgp.c -o xdebug_handler_dbgp.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_handler_dbgp.c  -fPIC -DPIC -o .libs/xdebug_handler_dbgp.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_handlers.c -o xdebug_handlers.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_handlers.c  -fPIC -DPIC -o .libs/xdebug_handlers.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_llist.c -o xdebug_llist.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_llist.c  -fPIC -DPIC -o .libs/xdebug_llist.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_monitor.c -o xdebug_monitor.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_monitor.c  -fPIC -DPIC -o .libs/xdebug_monitor.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_hash.c -o xdebug_hash.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_hash.c  -fPIC -DPIC -o .libs/xdebug_hash.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_private.c -o xdebug_private.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_private.c  -fPIC -DPIC -o .libs/xdebug_private.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_profiler.c -o xdebug_profiler.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_profiler.c  -fPIC -DPIC -o .libs/xdebug_profiler.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_set.c -o xdebug_set.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_set.c  -fPIC -DPIC -o .libs/xdebug_set.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_stack.c -o xdebug_stack.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_stack.c  -fPIC -DPIC -o .libs/xdebug_stack.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_str.c -o xdebug_str.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_str.c  -fPIC -DPIC -o .libs/xdebug_str.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_superglobals.c -o xdebug_superglobals.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_superglobals.c  -fPIC -DPIC -o .libs/xdebug_superglobals.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_tracing.c -o xdebug_tracing.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_tracing.c  -fPIC -DPIC -o .libs/xdebug_tracing.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_trace_textual.c -o xdebug_trace_textual.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_trace_textual.c  -fPIC -DPIC -o .libs/xdebug_trace_textual.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_trace_computerized.c -o xdebug_trace_computerized.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_trace_computerized.c  -fPIC -DPIC -o .libs/xdebug_trace_computerized.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_trace_html.c -o xdebug_trace_html.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_trace_html.c  -fPIC -DPIC -o .libs/xdebug_trace_html.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_var.c -o xdebug_var.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_var.c  -fPIC -DPIC -o .libs/xdebug_var.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/xdebug_xml.c -o xdebug_xml.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/xdebug_xml.c  -fPIC -DPIC -o .libs/xdebug_xml.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=compile cc   -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/xdebug/usefulstuff.c -o usefulstuff.lo
+ cc -I. -I/tmp/pear/temp/xdebug -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/xdebug/usefulstuff.c  -fPIC -DPIC -o .libs/usefulstuff.o
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=link cc -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/include -I/tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/main -I/tmp/pear/temp/xdebug -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2    -o xdebug.la -export-dynamic -avoid-version -prefer-pic -module -rpath /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/modules  xdebug.lo xdebug_branch_info.lo xdebug_code_coverage.lo xdebug_com.lo xdebug_compat.lo xdebug_gc_stats.lo xdebug_filter.lo xdebug_handler_dbgp.lo xdebug_handlers.lo xdebug_llist.lo xdebug_monitor.lo xdebug_hash.lo xdebug_private.lo xdebug_profiler.lo xdebug_set.lo xdebug_stack.lo xdebug_str.lo xdebug_superglobals.lo xdebug_tracing.lo xdebug_trace_textual.lo xdebug_trace_computerized.lo xdebug_trace_html.lo xdebug
+_var.lo xdebug_xml.lo usefulstuff.lo -lm
+cc -shared  .libs/xdebug.o .libs/xdebug_branch_info.o .libs/xdebug_code_coverage.o .libs/xdebug_com.o .libs/xdebug_compat.o .libs/xdebug_gc_stats.o .libs/xdebug_filter.o .libs/xdebug_handler_dbgp.o .libs/xdebug_handlers.o .libs/xdebug_llist.o .libs/xdebug_monitor.o .libs/xdebug_hash.o .libs/xdebug_private.o .libs/xdebug_profiler.o .libs/xdebug_set.o .libs/xdebug_stack.o .libs/xdebug_str.o .libs/xdebug_superglobals.o .libs/xdebug_tracing.o .libs/xdebug_trace_textual.o .libs/xdebug_trace_computerized.o .libs/xdebug_trace_html.o .libs/xdebug_var.o .libs/xdebug_xml.o .libs/usefulstuff.o  -lm  -Wl,-soname -Wl,xdebug.so -o .libs/xdebug.so
+creating xdebug.la
+(cd .libs && rm -f xdebug.la && ln -s ../xdebug.la xdebug.la)
+/bin/bash /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/libtool --mode=install cp ./xdebug.la /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/modules
+cp ./.libs/xdebug.so /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/modules/xdebug.so
+cp ./.libs/xdebug.lai /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/modules/xdebug.la
+PATH="$PATH:/sbin" ldconfig -n /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/modules
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/pear/temp/pear-build-defaultuser3HLN8Q/xdebug-2.7.2/modules
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+
+Build complete.
+Don't forget to run 'make test'.
+
+running: make INSTALL_ROOT="/tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2" install
+Installing shared extensions:     /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr/local/lib/php/extensions/no-debug-non-zts-20180731/
+
+shtool:echo:Warning: unable to determine terminal sequence for bold mode
+  +----------------------------------------------------------------------+
+  |                                                                      |
+  |   INSTALLATION INSTRUCTIONS                                          |
+  |   =========================                                          |
+  |                                                                      |
+  |   See https://xdebug.org/install.php#configure-php for instructions  |
+  |   on how to enable Xdebug for PHP.                                   |
+  |                                                                      |
+  |   Documentation is available online as well:                         |
+  |   - A list of all settings:  https://xdebug.org/docs-settings.php    |
+  |   - A list of all functions: https://xdebug.org/docs-functions.php   |
+  |   - Profiling instructions:  https://xdebug.org/docs-profiling2.php  |
+  |   - Remote debugging:        https://xdebug.org/docs-debugger.php    |
+  |                                                                      |
+  |                                                                      |
+  |   NOTE: Please disregard the message                                 |
+  |       You should add "extension=xdebug.so" to php.ini                |
+  |   that is emitted by the PECL installer. This does not work for      |
+  |   Xdebug.                                                            |
+  |                                                                      |
+  +----------------------------------------------------------------------+
+shtool:echo:Warning: unable to determine terminal sequence for bold mode
+
+
+running: find "/tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2" | xargs ls -dils
+1839629    4 drwxr-xr-x 3 root root    4096 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2
+1839698    4 drwxr-xr-x 3 root root    4096 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr
+1839699    4 drwxr-xr-x 3 root root    4096 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr/local
+1839700    4 drwxr-xr-x 3 root root    4096 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr/local/lib
+1839701    4 drwxr-xr-x 3 root root    4096 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr/local/lib/php
+1839702    4 drwxr-xr-x 3 root root    4096 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr/local/lib/php/extensions
+1839703    4 drwxr-xr-x 2 root root    4096 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr/local/lib/php/extensions/no-debug-non-zts-20180731
+1839696 1780 -rwxr-xr-x 1 root root 1821328 Sep  5 18:45 /tmp/pear/temp/pear-build-defaultuser3HLN8Q/install-xdebug-2.7.2/usr/local/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so
+
+Build process completed successfully
+Installing '/usr/local/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so'
+about to commit 22 file operations for xdebug
+successfully committed 22 file operations
+install ok: channel://pecl.php.net/xdebug-2.7.2
+configuration option "php_ini" is not set to php.ini location
+You should add "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so" to php.ini
+Removing intermediate container 41b9abe66c03
+ ---> 4666db63df2e
+Step 4/9 : RUN /bin/bash /opt/docker/scripts/install_dev_utils.sh
+ ---> Running in d1d6ea794c47
+Hit:1 http://cloudfront.debian.net/debian buster InRelease
+Hit:2 http://cloudfront.debian.net/debian buster-updates InRelease
+Hit:3 http://cloudfront.debian.net/debian-security buster/updates InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  git-man libaio1 libconfig-inifiles-perl liberror-perl libgpm2 libpcre2-8-0
+  libreadline5 libsnappy1v5 mariadb-client-10.3 mariadb-client-core-10.3
+  mariadb-common mysql-common vim-common vim-runtime xxd
+Suggested packages:
+  gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-el git-email
+  git-gui gitk gitweb git-cvs git-mediawiki git-svn gpm keychain libpam-ssh
+  monkeysphere ssh-askpass doc-base ctags vim-doc vim-scripts
+Recommended packages:
+  less libdbd-mysql-perl libdbi-perl libterm-readkey-perl xauth
+The following NEW packages will be installed:
+  git git-man libaio1 libconfig-inifiles-perl liberror-perl libgpm2
+  libpcre2-8-0 libreadline5 libsnappy1v5 mariadb-client mariadb-client-10.3
+  mariadb-client-core-10.3 mariadb-common mysql-common openssh-client pv vim
+  vim-common vim-runtime wget xxd
+0 upgraded, 21 newly installed, 0 to remove and 2 not upgraded.
+Need to get 23.7 MB of archives.
+After this operation, 131 MB of additional disk space will be used.
+Get:1 http://cloudfront.debian.net/debian buster/main amd64 xxd amd64 2:8.1.0875-5 [140 kB]
+Get:2 http://cloudfront.debian.net/debian buster/main amd64 vim-common all 2:8.1.0875-5 [195 kB]
+Get:3 http://cloudfront.debian.net/debian buster/main amd64 openssh-client amd64 1:7.9p1-10 [782 kB]
+Get:4 http://cloudfront.debian.net/debian buster/main amd64 libpcre2-8-0 amd64 10.32-5 [213 kB]
+Get:5 http://cloudfront.debian.net/debian buster/main amd64 wget amd64 1.20.1-1.1 [902 kB]
+Get:6 http://cloudfront.debian.net/debian buster/main amd64 liberror-perl all 0.17027-2 [30.9 kB]
+Get:7 http://cloudfront.debian.net/debian buster/main amd64 git-man all 1:2.20.1-2 [1619 kB]
+Get:8 http://cloudfront.debian.net/debian buster/main amd64 git amd64 1:2.20.1-2 [5621 kB]
+Get:9 http://cloudfront.debian.net/debian buster/main amd64 libaio1 amd64 0.3.112-3 [11.2 kB]
+Get:10 http://cloudfront.debian.net/debian buster/main amd64 libconfig-inifiles-perl all 3.000001-1 [51.9 kB]
+Get:11 http://cloudfront.debian.net/debian buster/main amd64 libgpm2 amd64 1.20.7-5 [35.1 kB]
+Get:12 http://cloudfront.debian.net/debian buster/main amd64 libreadline5 amd64 5.2+dfsg-3+b13 [120 kB]
+Get:13 http://cloudfront.debian.net/debian buster/main amd64 libsnappy1v5 amd64 1.1.7-1 [17.0 kB]
+Get:14 http://cloudfront.debian.net/debian buster/main amd64 mysql-common all 5.8+1.0.5 [7324 B]
+Get:15 http://cloudfront.debian.net/debian buster/main amd64 mariadb-common all 1:10.3.15-1 [31.3 kB]
+Get:16 http://cloudfront.debian.net/debian buster/main amd64 mariadb-client-core-10.3 amd64 1:10.3.15-1 [5645 kB]
+Get:17 http://cloudfront.debian.net/debian buster/main amd64 mariadb-client-10.3 amd64 1:10.3.15-1 [1130 kB]
+Get:18 http://cloudfront.debian.net/debian buster/main amd64 mariadb-client all 1:10.3.15-1 [30.1 kB]
+Get:19 http://cloudfront.debian.net/debian buster/main amd64 pv amd64 1.6.6-1 [49.0 kB]
+Get:20 http://cloudfront.debian.net/debian buster/main amd64 vim-runtime all 2:8.1.0875-5 [5775 kB]
+Get:21 http://cloudfront.debian.net/debian buster/main amd64 vim amd64 2:8.1.0875-5 [1280 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 23.7 MB in 2s (9670 kB/s)
+Selecting previously unselected package xxd.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19647 files and directories currently installed.)
+Preparing to unpack .../00-xxd_2%3a8.1.0875-5_amd64.deb ...
+Unpacking xxd (2:8.1.0875-5) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../01-vim-common_2%3a8.1.0875-5_all.deb ...
+Unpacking vim-common (2:8.1.0875-5) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../02-openssh-client_1%3a7.9p1-10_amd64.deb ...
+Unpacking openssh-client (1:7.9p1-10) ...
+Selecting previously unselected package libpcre2-8-0:amd64.
+Preparing to unpack .../03-libpcre2-8-0_10.32-5_amd64.deb ...
+Unpacking libpcre2-8-0:amd64 (10.32-5) ...
+Selecting previously unselected package wget.
+Preparing to unpack .../04-wget_1.20.1-1.1_amd64.deb ...
+Unpacking wget (1.20.1-1.1) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../05-liberror-perl_0.17027-2_all.deb ...
+Unpacking liberror-perl (0.17027-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../06-git-man_1%3a2.20.1-2_all.deb ...
+Unpacking git-man (1:2.20.1-2) ...
+Selecting previously unselected package git.
+Preparing to unpack .../07-git_1%3a2.20.1-2_amd64.deb ...
+Unpacking git (1:2.20.1-2) ...
+Selecting previously unselected package libaio1:amd64.
+Preparing to unpack .../08-libaio1_0.3.112-3_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.112-3) ...
+Selecting previously unselected package libconfig-inifiles-perl.
+Preparing to unpack .../09-libconfig-inifiles-perl_3.000001-1_all.deb ...
+Unpacking libconfig-inifiles-perl (3.000001-1) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../10-libgpm2_1.20.7-5_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-5) ...
+Selecting previously unselected package libreadline5:amd64.
+Preparing to unpack .../11-libreadline5_5.2+dfsg-3+b13_amd64.deb ...
+Unpacking libreadline5:amd64 (5.2+dfsg-3+b13) ...
+Selecting previously unselected package libsnappy1v5:amd64.
+Preparing to unpack .../12-libsnappy1v5_1.1.7-1_amd64.deb ...
+Unpacking libsnappy1v5:amd64 (1.1.7-1) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../13-mysql-common_5.8+1.0.5_all.deb ...
+Unpacking mysql-common (5.8+1.0.5) ...
+Selecting previously unselected package mariadb-common.
+Preparing to unpack .../14-mariadb-common_1%3a10.3.15-1_all.deb ...
+Unpacking mariadb-common (1:10.3.15-1) ...
+Selecting previously unselected package mariadb-client-core-10.3.
+Preparing to unpack .../15-mariadb-client-core-10.3_1%3a10.3.15-1_amd64.deb ...
+Unpacking mariadb-client-core-10.3 (1:10.3.15-1) ...
+Selecting previously unselected package mariadb-client-10.3.
+Preparing to unpack .../16-mariadb-client-10.3_1%3a10.3.15-1_amd64.deb ...
+Unpacking mariadb-client-10.3 (1:10.3.15-1) ...
+Selecting previously unselected package mariadb-client.
+Preparing to unpack .../17-mariadb-client_1%3a10.3.15-1_all.deb ...
+Unpacking mariadb-client (1:10.3.15-1) ...
+Selecting previously unselected package pv.
+Preparing to unpack .../18-pv_1.6.6-1_amd64.deb ...
+Unpacking pv (1.6.6-1) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../19-vim-runtime_2%3a8.1.0875-5_all.deb ...
+Adding 'diversion of /usr/share/vim/vim81/doc/help.txt to /usr/share/vim/vim81/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim81/doc/tags to /usr/share/vim/vim81/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:8.1.0875-5) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../20-vim_2%3a8.1.0875-5_amd64.deb ...
+Unpacking vim (2:8.1.0875-5) ...
+Setting up libconfig-inifiles-perl (3.000001-1) ...
+Setting up mysql-common (5.8+1.0.5) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up libreadline5:amd64 (5.2+dfsg-3+b13) ...
+Setting up libgpm2:amd64 (1.20.7-5) ...
+Setting up openssh-client (1:7.9p1-10) ...
+Setting up xxd (2:8.1.0875-5) ...
+Setting up libsnappy1v5:amd64 (1.1.7-1) ...
+Setting up liberror-perl (0.17027-2) ...
+Setting up mariadb-common (1:10.3.15-1) ...
+update-alternatives: using /etc/mysql/mariadb.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up vim-common (2:8.1.0875-5) ...
+Setting up libpcre2-8-0:amd64 (10.32-5) ...
+Setting up pv (1.6.6-1) ...
+Setting up git-man (1:2.20.1-2) ...
+Setting up vim-runtime (2:8.1.0875-5) ...
+Setting up libaio1:amd64 (0.3.112-3) ...
+Setting up vim (2:8.1.0875-5) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) doesn't exist
+Setting up wget (1.20.1-1.1) ...
+Setting up git (1:2.20.1-2) ...
+Setting up mariadb-client-core-10.3 (1:10.3.15-1) ...
+Setting up mariadb-client-10.3 (1:10.3.15-1) ...
+Setting up mariadb-client (1:10.3.15-1) ...
+Processing triggers for mime-support (3.62) ...
+Processing triggers for libc-bin (2.28-10) ...
+All settings correct for using Composer
+Downloading...
+
+Composer (version 1.9.0) successfully installed to: /app/composer.phar
+Use it: php composer.phar
+
+
+## Installing the NodeSource Node.js 12.x repo...
+
+
+## Populating apt-get cache...
+
++ apt-get update
+Hit:1 http://cloudfront.debian.net/debian buster InRelease
+Hit:2 http://cloudfront.debian.net/debian buster-updates InRelease
+Hit:3 http://cloudfront.debian.net/debian-security buster/updates InRelease
+Reading package lists...
+
+## Installing packages required for setup: lsb-release gnupg...
+
++ apt-get install -y lsb-release gnupg > /dev/null 2>&1
+
+## Confirming "buster" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_12.x/dists/buster/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+[91mWarning: apt-key output should not be parsed (stdout is not a terminal)
+[0mOK
+
+## Creating apt sources list file for the NodeSource Node.js 12.x repo...
+
++ echo 'deb https://deb.nodesource.com/node_12.x buster main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node_12.x buster main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Hit:1 http://cloudfront.debian.net/debian buster InRelease
+Hit:2 http://cloudfront.debian.net/debian buster-updates InRelease
+Hit:3 http://cloudfront.debian.net/debian-security buster/updates InRelease
+Get:4 https://deb.nodesource.com/node_12.x buster InRelease [4584 B]
+Get:5 https://deb.nodesource.com/node_12.x buster/main amd64 Packages [762 B]
+Fetched 5346 B in 1s (9536 B/s)
+Reading package lists...
+
+## Run `sudo apt-get install -y nodejs` to install Node.js 12.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libpython-stdlib libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib
+  python python-minimal python2 python2-minimal python2.7 python2.7-minimal
+Suggested packages:
+  python-doc python-tk python2-doc python2.7-doc binfmt-support
+The following NEW packages will be installed:
+  libpython-stdlib libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib
+  nodejs python python-minimal python2 python2-minimal python2.7
+  python2.7-minimal
+0 upgraded, 11 newly installed, 0 to remove and 2 not upgraded.
+Need to get 21.2 MB of archives.
+After this operation, 99.1 MB of additional disk space will be used.
+Get:1 https://deb.nodesource.com/node_12.x buster/main amd64 nodejs amd64 12.10.0-1nodesource1 [17.0 MB]
+Get:2 http://cloudfront.debian.net/debian buster/main amd64 libpython2.7-minimal amd64 2.7.16-2 [395 kB]
+Get:3 http://cloudfront.debian.net/debian buster/main amd64 python2.7-minimal amd64 2.7.16-2 [1367 kB]
+Get:4 http://cloudfront.debian.net/debian buster/main amd64 python2-minimal amd64 2.7.16-1 [41.4 kB]
+Get:5 http://cloudfront.debian.net/debian buster/main amd64 python-minimal amd64 2.7.16-1 [21.0 kB]
+Get:6 http://cloudfront.debian.net/debian buster/main amd64 libpython2.7-stdlib amd64 2.7.16-2 [1910 kB]
+Get:7 http://cloudfront.debian.net/debian buster/main amd64 python2.7 amd64 2.7.16-2 [305 kB]
+Get:8 http://cloudfront.debian.net/debian buster/main amd64 libpython2-stdlib amd64 2.7.16-1 [20.8 kB]
+Get:9 http://cloudfront.debian.net/debian buster/main amd64 libpython-stdlib amd64 2.7.16-1 [20.8 kB]
+Get:10 http://cloudfront.debian.net/debian buster/main amd64 python2 amd64 2.7.16-1 [41.6 kB]
+Get:11 http://cloudfront.debian.net/debian buster/main amd64 python amd64 2.7.16-1 [22.8 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 21.2 MB in 1s (14.5 MB/s)
+Selecting previously unselected package libpython2.7-minimal:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22950 files and directories currently installed.)
+Preparing to unpack .../0-libpython2.7-minimal_2.7.16-2_amd64.deb ...
+Unpacking libpython2.7-minimal:amd64 (2.7.16-2) ...
+Selecting previously unselected package python2.7-minimal.
+Preparing to unpack .../1-python2.7-minimal_2.7.16-2_amd64.deb ...
+Unpacking python2.7-minimal (2.7.16-2) ...
+Selecting previously unselected package python2-minimal.
+Preparing to unpack .../2-python2-minimal_2.7.16-1_amd64.deb ...
+Unpacking python2-minimal (2.7.16-1) ...
+Selecting previously unselected package python-minimal.
+Preparing to unpack .../3-python-minimal_2.7.16-1_amd64.deb ...
+Unpacking python-minimal (2.7.16-1) ...
+Selecting previously unselected package libpython2.7-stdlib:amd64.
+Preparing to unpack .../4-libpython2.7-stdlib_2.7.16-2_amd64.deb ...
+Unpacking libpython2.7-stdlib:amd64 (2.7.16-2) ...
+Selecting previously unselected package python2.7.
+Preparing to unpack .../5-python2.7_2.7.16-2_amd64.deb ...
+Unpacking python2.7 (2.7.16-2) ...
+Selecting previously unselected package libpython2-stdlib:amd64.
+Preparing to unpack .../6-libpython2-stdlib_2.7.16-1_amd64.deb ...
+Unpacking libpython2-stdlib:amd64 (2.7.16-1) ...
+Selecting previously unselected package libpython-stdlib:amd64.
+Preparing to unpack .../7-libpython-stdlib_2.7.16-1_amd64.deb ...
+Unpacking libpython-stdlib:amd64 (2.7.16-1) ...
+Setting up libpython2.7-minimal:amd64 (2.7.16-2) ...
+Setting up python2.7-minimal (2.7.16-2) ...
+Linking and byte-compiling packages for runtime python2.7...
+Setting up python2-minimal (2.7.16-1) ...
+Selecting previously unselected package python2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23707 files and directories currently installed.)
+Preparing to unpack .../python2_2.7.16-1_amd64.deb ...
+Unpacking python2 (2.7.16-1) ...
+Setting up python-minimal (2.7.16-1) ...
+Selecting previously unselected package python.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23737 files and directories currently installed.)
+Preparing to unpack .../python_2.7.16-1_amd64.deb ...
+Unpacking python (2.7.16-1) ...
+Selecting previously unselected package nodejs.
+Preparing to unpack .../nodejs_12.10.0-1nodesource1_amd64.deb ...
+Unpacking nodejs (12.10.0-1nodesource1) ...
+Setting up nodejs (12.10.0-1nodesource1) ...
+Setting up libpython2.7-stdlib:amd64 (2.7.16-2) ...
+Setting up python2.7 (2.7.16-2) ...
+Setting up libpython2-stdlib:amd64 (2.7.16-1) ...
+Setting up python2 (2.7.16-1) ...
+Setting up libpython-stdlib:amd64 (2.7.16-1) ...
+Setting up python (2.7.16-1) ...
+Processing triggers for mime-support (3.62) ...
+Removing intermediate container d1d6ea794c47
+ ---> a5c374011ecd
+Step 5/9 : COPY ./config/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+ ---> d14cddd2d842
+Step 6/9 : ENV COMPOSER_ALLOW_SUPERUSER=1
+ ---> Running in 5229588ab6ba
+Removing intermediate container 5229588ab6ba
+ ---> 41924b07dd51
+Step 7/9 : RUN /bin/bash /opt/docker/scripts/install_dev_utils.sh
+ ---> Running in 32da60b224e9
+Hit:1 http://cloudfront.debian.net/debian buster InRelease
+Hit:2 http://cloudfront.debian.net/debian buster-updates InRelease
+Hit:3 http://cloudfront.debian.net/debian-security buster/updates InRelease
+Hit:4 https://deb.nodesource.com/node_12.x buster InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+git is already the newest version (1:2.20.1-2).
+mariadb-client is already the newest version (1:10.3.15-1).
+openssh-client is already the newest version (1:7.9p1-10).
+pv is already the newest version (1.6.6-1).
+vim is already the newest version (2:8.1.0875-5).
+wget is already the newest version (1.20.1-1.1).
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+All settings correct for using Composer
+Downloading...
+
+Composer (version 1.9.0) successfully installed to: /app/composer.phar
+Use it: php composer.phar
+
+[91mln: failed to create symbolic link '/usr/bin/composer': File exists
+[0m
+## Installing the NodeSource Node.js 12.x repo...
+
+
+## Populating apt-get cache...
+
++ apt-get update
+Hit:1 http://cloudfront.debian.net/debian buster InRelease
+Hit:2 https://deb.nodesource.com/node_12.x buster InRelease
+Hit:3 http://cloudfront.debian.net/debian buster-updates InRelease
+Hit:4 http://cloudfront.debian.net/debian-security buster/updates InRelease
+Reading package lists...
+
+## Confirming "buster" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_12.x/dists/buster/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+[91mWarning: apt-key output should not be parsed (stdout is not a terminal)
+[0mOK
+
+## Creating apt sources list file for the NodeSource Node.js 12.x repo...
+
++ echo 'deb https://deb.nodesource.com/node_12.x buster main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node_12.x buster main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Hit:1 http://cloudfront.debian.net/debian buster InRelease
+Hit:2 http://cloudfront.debian.net/debian buster-updates InRelease
+Hit:3 http://cloudfront.debian.net/debian-security buster/updates InRelease
+Hit:4 https://deb.nodesource.com/node_12.x buster InRelease
+Reading package lists...
+
+## Run `sudo apt-get install -y nodejs` to install Node.js 12.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nodejs is already the newest version (12.10.0-1nodesource1).
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Removing intermediate container 32da60b224e9
+ ---> 8cac01d1a04f
+Step 8/9 : COPY ./tools /opt/docker/tools
+ ---> 26c002bb837d
+Step 9/9 : ENV PATH="/opt/docker/tools:${PATH}"
+ ---> Running in a58cd125e3e0
+Removing intermediate container a58cd125e3e0
+ ---> b12a76f3c2f1
+Successfully built b12a76f3c2f1
+Successfully tagged jackthomasatl/docker-php:7.3.8-fpm-dev
