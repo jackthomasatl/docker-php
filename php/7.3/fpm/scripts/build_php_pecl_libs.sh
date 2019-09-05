@@ -28,10 +28,6 @@ for module_name in "${PECL_PHP_MODULES[@]}"; do
 
   case "$module_name" in
 
-    'http')
-      pecl_module_name="pecl_http"
-      ;;
-
   esac
 
   pecl -v install "$pecl_module_name" \

@@ -2,9 +2,6 @@
 
 FROM php:7.3.8-fpm-buster
 
-ENV DEBIAN_FRONTEND=noninteractive PHP=7.3 USER=www-data
-ENV COMPOSER_ALLOW_SUPERUSER=1
-
 RUN mkdir -p /opt/docker/
 COPY ./scripts /opt/docker/scripts
 
@@ -17,9 +14,12 @@ RUN /bin/bash /opt/docker/scripts/build_php_base_libs.sh
 RUN /bin/bash /opt/docker/scripts/build_php_pecl_libs.sh
 
 # Install Utils
+ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN /bin/bash /opt/docker/scripts/install_dev_utils.sh
+
+# Install Dev Tools
 COPY ./tools /opt/docker/tools
 ENV PATH="/opt/docker/tools:${PATH}"
-RUN /bin/bash /opt/docker/scripts/install_utils.sh
 
 # Move configs in
 COPY ./config/php.ini /usr/local/etc/php/php.ini
