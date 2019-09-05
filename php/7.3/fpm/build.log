@@ -1,0 +1,148 @@
+Sending build context to Docker daemon  43.52kB
+Step 1/18 : FROM php:7.3.8-fpm-buster
+ ---> d29a31d54132
+Step 2/18 : ENV DEBIAN_FRONTEND=noninteractive PHP=7.3 USER=www-data
+ ---> Using cache
+ ---> 914580beab65
+Step 3/18 : ENV COMPOSER_ALLOW_SUPERUSER=1
+ ---> Using cache
+ ---> 103031bda0f8
+Step 4/18 : RUN mkdir -p /opt/docker/
+ ---> Using cache
+ ---> cbac76fe8daf
+Step 5/18 : COPY ./scripts /opt/docker/scripts
+ ---> f49751e1ccf4
+Step 6/18 : COPY ./apt/sources.list /etc/apt/sources.list
+ ---> 3b7dd80ef94b
+Step 7/18 : RUN /bin/bash /opt/docker/scripts/build_php_base_libs.sh
+ ---> Running in 4f2e1cd366de
+Installing dependencies: 
+Get:1 http://cloudfront.debian.net/debian buster InRelease [118 kB]
+Get:2 http://cloudfront.debian.net/debian buster-updates InRelease [49.3 kB]
+Get:3 http://cloudfront.debian.net/debian-security buster/updates InRelease [39.1 kB]
+Get:4 http://cloudfront.debian.net/debian buster/main amd64 Packages [7897 kB]
+Get:5 http://cloudfront.debian.net/debian buster-updates/main amd64 Packages [884 B]
+Get:6 http://cloudfront.debian.net/debian-security buster/updates/main amd64 Packages [82.1 kB]
+Fetched 8186 kB in 2s (4528 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.64.0-4).
+libcurl4 is already the newest version (7.64.0-4).
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core freetds-common icu-devtools
+  libaspell-dev libaspell15 libct4 libcurl3-gnutls libexpat1 libexpat1-dev
+  libfontconfig1 libfontconfig1-dev libfreetype6 libgd3 libice-dev libice6
+  libicu-dev libjbig-dev libjbig0 libjpeg62-turbo libldb1 liblmdb0 liblzma-dev
+  libpng16-16 libpq5 libpthread-stubs0-dev libreadline7 libsm-dev libsm6
+  libsqlite3-0 libtalloc-dev libtalloc2 libtdb-dev libtdb1 libtevent0
+  libtiff-dev libtiff5 libtiffxx5 libvpx-dev libvpx5 libwebp6 libwebpdemux2
+  libwebpmux3 libx11-6 libx11-data libx11-dev libxau-dev libxau6 libxcb1
+  libxcb1-dev libxdmcp-dev libxdmcp6 libxpm-dev libxpm4 libxt-dev libxt6
+  readline-common sensible-utils ucf uuid-dev x11-common x11proto-core-dev
+  x11proto-dev xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  aspell-doc aspell libcurl4-doc libgnutls28-dev libidn11-dev libkrb5-dev
+  libldap2-dev librtmp-dev libssh2-1-dev libgd-tools libice-doc icu-doc
+  liblzma-doc postgresql-doc-11 libsm-doc sqlite3-doc libx11-doc libxcb-doc
+  libxt-doc readline-doc
+Recommended packages:
+  aspell-en | aspell-dictionary | aspell6a-dictionary bzip2-doc freetype2-doc
+  libpng-tools
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core freetds-common freetds-dev icu-devtools
+  libaspell-dev libaspell15 libbz2-dev libct4 libcurl3-gnutls
+  libcurl4-gnutls-dev libexpat1 libexpat1-dev libfontconfig1
+  libfontconfig1-dev libfreetype6 libfreetype6-dev libgd-dev libgd3 libice-dev
+  libice6 libicu-dev libjbig-dev libjbig0 libjpeg62-turbo libjpeg62-turbo-dev
+  libldb-dev libldb1 liblmdb0 liblzma-dev libpng-dev libpng16-16 libpq-dev
+  libpq5 libpspell-dev libpthread-stubs0-dev libreadline7 libsm-dev libsm6
+  libsqlite3-0 libsqlite3-dev libsybdb5 libtalloc-dev libtalloc2 libtdb-dev
+  libtdb1 libtevent0 libtiff-dev libtiff5 libtiffxx5 libvpx-dev libvpx5
+  libwebp-dev libwebp6 libwebpdemux2 libwebpmux3 libx11-6 libx11-data
+  libx11-dev libxau-dev libxau6 libxcb1 libxcb1-dev libxdmcp-dev libxdmcp6
+  libxml2-dev libxpm-dev libxpm4 libxt-dev libxt6 readline-common
+  sensible-utils sqlite3 ucf unzip uuid-dev x11-common x11proto-core-dev
+  x11proto-dev xorg-sgml-doctools xtrans-dev zip zlib1g-dev
+0 upgraded, 83 newly installed, 0 to remove and 2 not upgraded.
+Need to get 28.8 MB of archives.
+After this operation, 105 MB of additional disk space will be used.
+Get:1 http://cloudfront.debian.net/debian buster/main amd64 readline-common all 7.0-5 [70.6 kB]
+Get:2 http://cloudfront.debian.net/debian buster/main amd64 sensible-utils all 0.0.12 [15.8 kB]
+Get:3 http://cloudfront.debian.net/debian buster/main amd64 ucf all 3.0038+nmu1 [69.0 kB]
+Get:4 http://cloudfront.debian.net/debian buster/main amd64 fonts-dejavu-core all 2.37-1 [1068 kB]
+Get:5 http://cloudfront.debian.net/debian buster/main amd64 fontconfig-config all 2.13.1-2 [280 kB]
+Get:6 http://cloudfront.debian.net/debian buster/main amd64 freetds-common all 1.00.104-1 [40.1 kB]
+Get:7 http://cloudfront.debian.net/debian buster/main amd64 libct4 amd64 1.00.104-1 [163 kB]
+Get:8 http://cloudfront.debian.net/debian buster/main amd64 libsybdb5 amd64 1.00.104-1 [191 kB]
+Get:9 http://cloudfront.debian.net/debian buster/main amd64 freetds-dev amd64 1.00.104-1 [278 kB]
+Get:10 http://cloudfront.debian.net/debian buster/main amd64 icu-devtools amd64 63.1-6 [188 kB]
+Get:11 http://cloudfront.debian.net/debian buster/main amd64 libaspell15 amd64 0.60.7~20110707-6 [326 kB]
+Get:12 http://cloudfront.debian.net/debian buster/main amd64 libaspell-dev amd64 0.60.7~20110707-6 [32.6 kB]
+Get:13 http://cloudfront.debian.net/debian buster/main amd64 libbz2-dev amd64 1.0.6-9.1 [30.2 kB]
+Get:14 http://cloudfront.debian.net/debian buster/main amd64 libcurl3-gnutls amd64 7.64.0-4 [329 kB]
+Get:15 http://cloudfront.debian.net/debian buster/main amd64 libcurl4-gnutls-dev amd64 7.64.0-4 [418 kB]
+Get:16 http://cloudfront.debian.net/debian buster/main amd64 libexpat1 amd64 2.2.6-2 [106 kB]
+Get:17 http://cloudfront.debian.net/debian buster/main amd64 libexpat1-dev amd64 2.2.6-2 [152 kB]
+Get:18 http://cloudfront.debian.net/debian buster/main amd64 libpng16-16 amd64 1.6.36-6 [292 kB]
+Get:19 http://cloudfront.debian.net/debian buster/main amd64 libfreetype6 amd64 2.9.1-3 [379 kB]
+Get:20 http://cloudfront.debian.net/debian buster/main amd64 libfontconfig1 amd64 2.13.1-2 [346 kB]
+Get:21 http://cloudfront.debian.net/debian buster/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-1 [214 kB]
+Get:22 http://cloudfront.debian.net/debian buster/main amd64 libpng-dev amd64 1.6.36-6 [300 kB]
+Get:23 http://cloudfront.debian.net/debian buster/main amd64 libfreetype6-dev amd64 2.9.1-3 [543 kB]
+Get:24 http://cloudfront.debian.net/debian buster/main amd64 uuid-dev amd64 2.33.1-0.1 [93.6 kB]
+Get:25 http://cloudfront.debian.net/debian buster/main amd64 libfontconfig1-dev amd64 2.13.1-2 [966 kB]
+Get:26 http://cloudfront.debian.net/debian buster/main amd64 libjpeg62-turbo amd64 1:1.5.2-2+b1 [134 kB]
+Get:27 http://cloudfront.debian.net/debian buster/main amd64 libjbig0 amd64 2.1-3.1+b2 [31.0 kB]
+Get:28 http://cloudfront.debian.net/debian buster/main amd64 libwebp6 amd64 0.6.1-2 [263 kB]
+Get:29 http://cloudfront.debian.net/debian buster/main amd64 libtiff5 amd64 4.0.10-4 [257 kB]
+Get:30 http://cloudfront.debian.net/debian buster/main amd64 libxau6 amd64 1:1.0.8-1+b2 [19.9 kB]
+Get:31 http://cloudfront.debian.net/debian buster/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
+Get:32 http://cloudfront.debian.net/debian buster/main amd64 libxcb1 amd64 1.13.1-2 [137 kB]
+Get:33 http://cloudfront.debian.net/debian buster/main amd64 libx11-data all 2:1.6.7-1 [298 kB]
+Get:34 http://cloudfront.debian.net/debian buster/main amd64 libx11-6 amd64 2:1.6.7-1 [754 kB]
+Get:35 http://cloudfront.debian.net/debian buster/main amd64 libxpm4 amd64 1:3.5.12-1 [49.1 kB]
+Get:36 http://cloudfront.debian.net/debian buster/main amd64 libgd3 amd64 2.2.5-5.2 [136 kB]
+Get:37 http://cloudfront.debian.net/debian buster/main amd64 libjpeg62-turbo-dev amd64 1:1.5.2-2+b1 [208 kB]
+Get:38 http://cloudfront.debian.net/debian buster/main amd64 xorg-sgml-doctools all 1:1.11-1 [21.9 kB]
+Get:39 http://cloudfront.debian.net/debian buster/main amd64 x11proto-dev all 2018.4-4 [251 kB]
+Get:40 http://cloudfront.debian.net/debian buster/main amd64 x11proto-core-dev all 2018.4-4 [3128 B]
+Get:41 http://cloudfront.debian.net/debian buster/main amd64 libxau-dev amd64 1:1.0.8-1+b2 [23.1 kB]
+Get:42 http://cloudfront.debian.net/debian buster/main amd64 libxdmcp-dev amd64 1:1.1.2-3 [42.2 kB]
+Get:43 http://cloudfront.debian.net/debian buster/main amd64 xtrans-dev all 1.3.5-1 [100 kB]
+Get:44 http://cloudfront.debian.net/debian buster/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5344 B]
+Get:45 http://cloudfront.debian.net/debian buster/main amd64 libxcb1-dev amd64 1.13.1-2 [174 kB]
+Get:46 http://cloudfront.debian.net/debian buster/main amd64 libx11-dev amd64 2:1.6.7-1 [827 kB]
+Get:47 http://cloudfront.debian.net/debian buster/main amd64 libxpm-dev amd64 1:3.5.12-1 [104 kB]
+Get:48 http://cloudfront.debian.net/debian buster/main amd64 x11-common all 1:7.7+19 [251 kB]
+Get:49 http://cloudfront.debian.net/debian buster/main amd64 libice6 amd64 2:1.0.9-2 [58.7 kB]
+Get:50 http://cloudfront.debian.net/debian buster/main amd64 libsm6 amd64 2:1.2.3-1 [35.1 kB]
+Get:51 http://cloudfront.debian.net/debian buster/main amd64 libxt6 amd64 1:1.1.5-1+b3 [190 kB]
+Get:52 http://cloudfront.debian.net/debian buster/main amd64 libice-dev amd64 2:1.0.9-2 [66.8 kB]
+Get:53 http://cloudfront.debian.net/debian buster/main amd64 libsm-dev amd64 2:1.2.3-1 [38.0 kB]
+Get:54 http://cloudfront.debian.net/debian buster/main amd64 libxt-dev amd64 1:1.1.5-1+b3 [426 kB]
+Get:55 http://cloudfront.debian.net/debian buster/main amd64 libvpx5 amd64 1.7.0-3 [811 kB]
+Get:56 http://cloudfront.debian.net/debian buster/main amd64 libvpx-dev amd64 1.7.0-3 [954 kB]
+Get:57 http://cloudfront.debian.net/debian buster/main amd64 libjbig-dev amd64 2.1-3.1+b2 [30.5 kB]
+Get:58 http://cloudfront.debian.net/debian buster/main amd64 liblzma-dev amd64 5.2.4-1 [210 kB]
+Get:59 http://cloudfront.debian.net/debian buster/main amd64 libtiffxx5 amd64 4.0.10-4 [108 kB]
+Get:60 http://cloudfront.debian.net/debian buster/main amd64 libtiff-dev amd64 4.0.10-4 [378 kB]
+Get:61 http://cloudfront.debian.net/debian buster/main amd64 libgd-dev amd64 2.2.5-5.2 [274 kB]
+Get:62 http://cloudfront.debian.net/debian buster/main amd64 libicu-dev amd64 63.1-6 [9181 kB]
+Get:63 http://cloudfront.debian.net/debian buster/main amd64 liblmdb0 amd64 0.9.22-1 [45.0 kB]
+Get:64 http://cloudfront.debian.net/debian buster/main amd64 libtalloc2 amd64 2.1.14-2 [35.4 kB]
+Get:65 http://cloudfront.debian.net/debian buster/main amd64 libtdb1 amd64 1.3.16-2+b1 [45.2 kB]
+Get:66 http://cloudfront.debian.net/debian buster/main amd64 libtevent0 amd64 0.9.37-1 [33.4 kB]
+Get:67 http://cloudfront.debian.net/debian buster/main amd64 libldb1 amd64 2:1.5.1+really1.4.6-3 [135 kB]
+Get:68 http://cloudfront.debian.net/debian buster/main amd64 libtalloc-dev amd64 2.1.14-2 [61.1 kB]
+Get:69 http://cloudfront.debian.net/debian buster/main amd64 libtdb-dev amd64 1.3.16-2+b1 [27.3 kB]
+Get:70 http://cloudfront.debian.net/debian buster/main amd64 libldb-dev amd64 2:1.5.1+really1.4.6-3 [97.5 kB]
+Get:71 http://cloudfront.debian.net/debian-security buster/updates/main amd64 libpq5 amd64 11.5-1+deb10u1 [166 kB]
+Get:72 http://cloudfront.debian.net/debian-security buster/updates/main amd64 libpq-dev amd64 11.5-1+deb10u1 [161 kB]
+Get:73 http://cloudfront.debian.net/debian buster/main amd64 libpspell-dev amd64 0.60.7~20110707-6 [29.7 kB]
+Get:74 http://cloudfront.debian.net/debian buster/main amd64 libreadline7 amd64 7.0-5 [151 kB]
+Get:75 http://cloudfront.debian.net/debian buster/main amd64 libsqlite3-0 amd64 3.27.2-3 [641 kB]
+Get:76 http://cloudfront.debian.net/debian buster/main amd64 libsqlite3-dev amd64 3.27.2-3 [787 kB]
+Get:77 http://cloudfront.debian.net/debian buster/main amd64 libwebpmux3 amd64 0.6.1-2 [97.7 kB]
+Get:78 http://cloudfront.debian.net/debian buster/main amd64 libwebpdemux2 amd64 0.6.1-2 [87.5 kB]
