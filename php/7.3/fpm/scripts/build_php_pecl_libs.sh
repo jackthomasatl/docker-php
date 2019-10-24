@@ -5,6 +5,7 @@ if [ -n "$HTTP_PROXY" ]; then
 fi
 
 PECL_PHP_MODULES=(
+  'apcu'              ## APC User Cache
   'imagick'           ## Image transform library
   'memcached'         ## Memcached driver
   'oauth'             ## Oauth client / server libraries
