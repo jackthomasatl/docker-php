@@ -33,6 +33,10 @@ for module_name in "${PECL_PHP_MODULES[@]}"; do
 
   case "$module_name" in
 
+    'apcu')
+        pecl_module_name = 'apcu-5.1.11';
+        ;;
+
   esac
 
   pecl -v install "$pecl_module_name" \
